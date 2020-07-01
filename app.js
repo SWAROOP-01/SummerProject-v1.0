@@ -4,8 +4,10 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     mongoose   = require('mongoose'),
     passport   = require('passport'),
-    LocalStategy = require('passport-local')
-    // User         = require('./models/users')
+    LocalStategy = require('passport-local'),
+    Product      = require('./models/products'),
+    Comment      = require('./models/comments'),
+    SeedDb       = require('./seedDb.js')
 
 // APP CONFIG
 app.set('view engine', 'ejs');
@@ -40,7 +42,16 @@ app.get('/',function(req,res){
 });
 
 app.get('/HomePage',function(req,res){
-    res.render('AZpages/index');
+
+    // FINDING ALL PRODUCTS AND PASSING THEM TO THE DATABASE
+    Product.find({},function(err,allProducts){
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('AZpages/index',{products : allProducts});            
+        }
+    });
+
 });
 
 app.get('/HomePage/:id',function(req,res){

@@ -1,0 +1,21 @@
+html { 
+    min-height:100%;
+    position:relative;    
+} 
+
+
+a.navbar-brand{
+    padding-left: 10px;
+}
+
+.footer{
+    background-color:#101010;
+    color:#9d9d9d;
+    font-size:14px;
+    font-weight:bold;
+    padding:10px;    
+    position: absolute; 
+    bottom: 0px; 
+    width: 100%;
+    text-align: center;
+}

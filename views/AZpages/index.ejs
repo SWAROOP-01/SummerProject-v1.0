@@ -2,8 +2,46 @@
 
 
 
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-3 category">
+            <ul class="list-group">
+                <li class="list-group-item active">Category</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+              </ul>
+        </div>
+        <div class="col-md-9 rightside">
+
+            <div class="container products">
+                <div class="row" style="display: flex; flex-wrap: wrap;">
+                    <% products.forEach(function(products){ %>
+                        <div class="col-lg-4 col-md-6 ">
+                            <div class="img-thumbnail" style="margin-bottom: 25px;">
+                                <img style="width: 100%;height: 160px;"  src=" <%= products.image %>">
+                                <figure>
+                                    <h5 class="text-center"><%= products.name.substring(0,55) + "..." %> </h5>
+                                </figure>
+                                <p style="text-align: center;">
+                                    <a class="btn btn-primary btn-sm" href="#">Go Shop!</a>
+                                </p>                    
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
 
 
+
+<div class="blank">
+<!--  MAI HAGA THODA FOOTER ME USKO THIK KARNE K LIYE HAI YEH -->
+</div>
 
 
 

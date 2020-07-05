@@ -3,7 +3,6 @@ html {
     position:relative;    
 } 
 
-
 a.navbar-brand{
     padding-left: 10px;
 }
@@ -14,8 +13,77 @@ a.navbar-brand{
     font-size:14px;
     font-weight:bold;
     padding:10px;    
-    position: absolute; 
-    bottom: 0px; 
     width: 100%;
     text-align: center;
 }
+
+.blank{
+    margin-bottom: 125px;
+}
+
+/* .container .products{
+    margin-top: 50px;
+} */
+
+.img-thumbnail h5{
+    font-weight: 400;
+}
+
+.rightside .img-fluid {
+    width: 660px;
+    height: 120px;
+    text-align: center;
+}
+
+.rightside , .category{
+    margin-top: 20px;
+}
+
+
+/* SEARCH BAR */
+
+    .searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 50px;
+    background-color: #353b48;
+    border-radius: 30px;
+    /* padding: 10px; */
+    text-align: center;
+    }
+
+    .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_input{
+        padding: 0 10px;
+        width: 220px;
+        caret-color:blue;
+        transition: width 0.4s linear;
+        }
+    
+        .searchbar:hover > .search_icon{
+        background: white;
+        color: crimson;
+        }
+    
+        .search_icon{
+        height: 40px;
+        width: 40px;
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color:white;
+        text-decoration:none;
+        }
+/* SEARCH BAR */

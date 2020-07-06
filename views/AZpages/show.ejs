@@ -1,1 +1,53 @@
-THIS WILL SHOW MY PRODUCT
+<%- include('../partials/header'); -%>
+
+<!-- <img src="<%= product.image %>" class="img-thumbnail"> -->
+<div class="container">
+    <div id="showpage" class="card mx-auto">
+        <img src="<%= product.image %>" class="card-img-top img-fluid">
+        <div class="card-body">
+            <div>
+
+                <!-- <% var price = product.price %>
+                <% var offer = 10*((Math.random() * 5) + 1); %>
+                <% var offerPrice  = price - price*offer/100 %>    -->
+                <div class="cardheader">
+                    <p>
+                        <span class="float-right"><i class="rupee sign icon"></i><%= product.price %></span>
+                        <span class="float-left"><%= product.name %></span>
+                    </p>                    
+                </div>
+                <div class="card-body">
+                    <h6>
+                        <%= product.disc %> 
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        
+    <div class="card mx-auto" id="showcomments" >
+        <div class="card-header"> 
+            <a class="btn btn-success float-right" href="/campgrounds/<%= product._id %>/comments/new">
+                <svg class="bi bi-pencil-square" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                </svg>
+                <span>Add a new Comment</span>
+            </a>
+            <h5>Comments</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <% product.comments.forEach(function(comment){ %>     
+                <li class="list-group-item">
+                    <strong class="float-left"><%= comment.author %></strong>
+                    <span class="float-right blockquote-footer">10 days ago..</span>
+                    <br><%= comment.text %>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+
+
+</div>
+<%- include('../partials/footer'); -%> 

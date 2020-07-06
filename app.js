@@ -55,5 +55,45 @@ app.get('/HomePage',function(req,res){
 });
 
 app.get('/HomePage/:id',function(req,res){
-    res.render('AZpages/show');
+    //finding the products with their provided id
+    Product.findById(req.params.id).populate('comments').exec(function(err,foundProduct){
+        if(err){
+            console.log(err);
+        } else{
+            console.log(foundProduct);
+            res.render("AZpages/show",{product : foundProduct});
+        }
+    });
 });
+
+// COMMENT ROUTES
+// app.get('/HomePage/:id/comments/new',function(req,res){
+//     // Find id And Name and pass it to the new page
+//     Product.findById(req.params.id).populate('comments').exec(function(err,foundProduct){
+//         if(err){
+//             console.log(err);
+//         } else{
+//             console.log(foundProduct);
+//             res.render("comments/new",{product : foundProduct});
+//         }
+//     });
+// });
+
+// app.post('/HomePage/:id/comments',function(req,res){
+//     Product.findById(req.params.id,function(err,foundProduct){
+//         if(err){
+//             console.log(err);
+//         } else{
+//             console.log(req.body.comment);
+//             Comment.create(req.body.comment,function(err,NewCommObj){
+//                 if (err){
+//                     console.log(err);
+//                 } else{
+//                     foundProduct.comments.push(NewCommObj);
+//                     foundProduct.save();
+//                     res.redirect('/HomePage/'+foundProduct._id);
+//                 }
+//             });
+//         }
+//     });
+// });

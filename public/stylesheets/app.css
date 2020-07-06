@@ -1,10 +1,13 @@
+/* GENERAL BODY STYLING */
 html { 
     min-height:100%;
     position:relative;    
 } 
+/* GENERAL BODY STYLING */
 
-a.navbar-brand{
-    padding-left: 10px;
+/* FOOTER STYLING */
+.blank{
+    margin-bottom: 125px;
 }
 
 .footer{
@@ -16,14 +19,13 @@ a.navbar-brand{
     width: 100%;
     text-align: center;
 }
+/* FOOTER STYLING */
 
-.blank{
-    margin-bottom: 125px;
+/* PRODUCT STYLING */
+#ADD{
+    height: 155px;
+    width: 75%;
 }
-
-/* .container .products{
-    margin-top: 50px;
-} */
 
 .img-thumbnail h5{
     font-weight: 400;
@@ -38,10 +40,14 @@ a.navbar-brand{
 .rightside , .category{
     margin-top: 20px;
 }
+/* PRODUCT STYLING */
 
+/* NAVBAR STYLING */
+a.navbar-brand{
+    padding-left: 10px;
+}
 
-/* SEARCH BAR */
-
+    /* SEARCH BAR */
     .searchbar{
     margin-bottom: auto;
     margin-top: auto;
@@ -86,4 +92,33 @@ a.navbar-brand{
         color:white;
         text-decoration:none;
         }
-/* SEARCH BAR */
+    /* SEARCH BAR */
+/* NAVBAR STYLING */
+
+
+/* SHOWPAGE STYLING */
+div#showpage.card{
+    width: 75%;
+    margin-bottom: 75px;
+    margin-top: 50px;
+}
+
+.card-img-top{
+    max-height: 580px;
+}
+
+.cardheader p{
+    font-weight: 700;
+}
+.card-body h6{
+    margin-top : 65px;
+    font-weight: 500;
+    word-spacing: .3em;
+}
+
+div#showcomments.card{
+    margin-bottom: 200px;
+    width: 75%;
+}
+
+/* SHOWPAGE STYLING */

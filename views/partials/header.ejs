@@ -15,6 +15,7 @@
     <!-- Custom Style Sheet -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.min.css">
+    <script src="https://kit.fontawesome.com/d992b2350c.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -41,15 +42,24 @@
 
             <ul class="navbar-nav ml-auto" style="text-align: right;">
                 
-                <li>
-                    <a class="nav-link" href="#">SignUp</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#">Login</a>
-                </li>           
-                <li>
-                    <a class="nav-link" href="#">Logout</a>
-                </li>
+                <% if(!currentUser){ %> 
+                    
+                    <li>
+                        <a class="nav-link" href="/register">SignUp</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                <% } else { %>
+
+                    <li>
+                        <h class="nav-link"> Signed in as <%= currentUser.username %></h> 
+                    </li>
+                    
+                    <li>
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                <% } %> 
             </ul>
         </div>
     </nav>

@@ -72,7 +72,61 @@ var data = [{
         disc     : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
         price    : 380,
         category : "AZFood"
-    }        
+    },
+    {
+        name     : "Sony MDR-ZX110A On-Ear Stereo Headphones (White), without mic",
+        image    : "https://images-na.ssl-images-amazon.com/images/I/51aIxM8tSoL._SL1016_.jpg",
+        disc     : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+        price    : 613,
+        category : "AZElectronics"
+    },
+    {
+        name     : "Sunfeast Dark Fantasy Choco Fills, 600g",
+        image    : "https://images-na.ssl-images-amazon.com/images/I/71yR4SYp3iL._SL1500_.jpg",
+        disc     : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+        price    : 188,
+        category : "AZFood"
+
+    },   
+    {
+        name     : "Samsung 6.0 Kg Fully-Automatic 5 Star Front Loading Washing Machine (WW60R20GLMA/TL, White)",
+        image    : "https://images-na.ssl-images-amazon.com/images/I/614-yYoVkUL._SL1500_.jpg",
+        disc     : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+        price    : 22800,
+        category : "AZElectronics"
+
+    },
+    {
+        name     : "D-Link Router and Resonate CRU12V2 Router UPS",
+        image    : "https://images-na.ssl-images-amazon.com/images/I/41UuOorj0mL._SL1001_.jpg",
+        disc     : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+        price    :  3400,
+        category : "AZElectronics"
+
+    }   ,
+    {
+        name     : "HP X1000 Wired Mouse (Black/Grey)",
+        image    : "https://images-na.ssl-images-amazon.com/images/I/61mucoT%2BifL._SL1500_.jpg",
+        disc     : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+        price    : 349,
+        category : "AZElectronics"
+    }  ,
+    {
+        name     : "Terabyte RJ45 CAT5E Ethernet Patch/LAN Cable (20M, Blue)",
+        image    : "https://images-na.ssl-images-amazon.com/images/I/61OPx6JJ-9L._SL1000_.jpg",
+        disc     : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+        price    : 376,
+        category : "AZElectronics"
+    },
+    {
+        name     : "Blisstone Men's Slim Fit T-Shirt",
+        image    : "https://images-na.ssl-images-amazon.com/images/I/51ZWmhfwN5L._UL1100_.jpg",
+        disc     : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+        price    : 379,
+        category : "AZFashion"
+    },
+    
+    
 ]
 
 function seedDb(){    

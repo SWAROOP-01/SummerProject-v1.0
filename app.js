@@ -64,6 +64,7 @@ app.get('/HomePage',function(req,res){
         } else {
             res.render('AZpages/index',{products : allProducts});            
         }
+        
     });
 
 });
@@ -134,7 +135,8 @@ app.post('/register',function(req,res){
 
 //LOGIN ROUTE
 app.get('/login',function(req,res){
-    res.render('auth/login'); 
+    res.render('auth/login');
+      
 });
 
 app.post('/login',
@@ -148,8 +150,12 @@ passport.authenticate('local',{
 
 // LOGOUT ROUTE
 app.get('/logout',function(req,res){
-    req.logout();
+    
+    req.session.destroy((err) => {
+        res.redirect('/') // will always fire after session is destroyed
+      })
     res.redirect('/HomePage');
+
 });
 
 
@@ -176,4 +182,5 @@ function isLoggedIn(req,res,next){
         return next();
     }
     res.redirect('/login');
+    // req.session.oldUrl = req.url;
 }

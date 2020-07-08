@@ -156,16 +156,18 @@ app.get('/logout',function(req,res){
 // CART ROUTES
 app.get('/add-to-cart/:id',isLoggedIn,function(req,res){
     var productId = req.params.id;
-    var cart = new Cart(req.session.cart ? req.session.cart : {items : {}});
+    var cart = new Cart(req.session.cart ? req.session.cart : {});
+    
     Product.findById(productId,function(err,product){
         if (err) {
             console.log(err);
-        } else {
+            return res.redirect('/HomePage/')
+        } 
               cart.add(product , product._id);  
               req.session.cart = cart;
               console.log(req.session.cart);
-              res.render('cart/cart');  
-        }
+              res.redirect('/HomePage/');  
+        
     });
 });
 

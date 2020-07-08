@@ -47,6 +47,12 @@ a.navbar-brand{
     padding-left: 10px;
 }
 
+.fa-shopping-cart{
+    color: white;
+    font-size: 1.2rem;
+    height: 20px;
+}
+
     /* SEARCH BAR */
     .searchbar{
     margin-bottom: auto;
@@ -111,14 +117,23 @@ div#showpage.card{
     font-weight: 700;
 }
 .card-body h6{
-    margin-top : 65px;
-    font-weight: 500;
+    margin-top : 20px;
+    font-weight: 400;
     word-spacing: .3em;
 }
 
 div#showcomments.card{
     margin-bottom: 200px;
     width: 75%;
+}
+
+.far.fa-plus-square{
+    color: gray;
+    font-size: 2rem;
+
+}
+#addtocart{
+    color: grey;
 }
 
 /* SHOWPAGE STYLING */

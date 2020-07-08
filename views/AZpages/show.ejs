@@ -5,25 +5,44 @@
     <div id="showpage" class="card mx-auto">
         <img src="<%= product.image %>" class="card-img-top img-fluid">
         <div class="card-body">
-            <div>
+           
 
-                <!-- <% var price = product.price %>
-                <% var offer = 10*((Math.random() * 5) + 1); %>
-                <% var offerPrice  = price - price*offer/100 %>    -->
-                <div class="cardheader">
-                    <p>
-                        <span class="float-right"><i class="rupee sign icon"></i><%= product.price %></span>
-                        <a class="text-center" href="/add-to-cart/<%= product._id %>"><i class="fas fa-cart-plus"></i></a>
-                        <span class="float-left"><%= product.name %></span>
+            <!-- <% var price = product.price %>
+            <% var offer = 10*((Math.random() * 5) + 1); %>
+            <% var offerPrice  = price - price*offer/100 %>    -->
+            <div class="cardheader">
+                <div class="row">
+                    <div class="col-md-4">
+                            
+                    </div>
+                    <div class="col-md-4">
+                        
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-lg"> <a href="/add-to-cart/<%= product._id %>"> Add to cart </a></button>
 
-                    </p>                    
+                        <span style="font-size: 1.2rem;"><i class="rupee sign icon"></i><%= product.price %></span>
+                    </div>
+
                 </div>
-                <div class="card-body">
-                    <h6>
-                        <%= product.disc %> 
-                    </h6>
+                <p></p>
+                <div class="row">
+                    <span style="font-weight: 600;" class="float-left"><%= product.name %></span>
                 </div>
-            </div>
+                    <!-- <span class="float-right"><i class="rupee sign icon"></i><%= product.price %></span>
+                    <span class="mr-50px"><a href="/add-to-cart/<%= product._id %>"><span id="addtocart">Add to cart</span><i class="far fa-plus-square"></i></a></span>
+                    <span class="float-left"><%= product.name %></span> -->
+
+                </div>
+
+                <div class="row">
+                    <div class="card-body">
+                        <h6>
+                            <%= product.disc %> 
+                        </h6>
+                    </div>
+    
+                </div>
         </div>
     </div>
 

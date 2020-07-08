@@ -26,13 +26,11 @@
             AZkart
         </a>
 
-            <div class="searchbar">
+        <div class="searchbar">
                 <input class="search_input" type="text" name="" placeholder="Search...">
                 <a href="#" class="search_icon"><i class="search icon"></i></a>
-            </div>
+        </div>
 
-
-            
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -41,9 +39,6 @@
         <div class="collapse navbar-collapse" id="navbarText">
 
             <ul class="navbar-nav ml-auto" style="text-align: right;">
-                <li>
-                    <a class="nav-link" href=""><i class="fas fa-cart-plus"></i></a>
-                </li>
                 
                 <% if(!currentUser){ %> 
                     
@@ -65,4 +60,13 @@
                 <% } %> 
             </ul>
         </div>
+        <ul class="nav navbar-nav ">
+            <li>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+               
+                <% if(session.cart) { %>
+                    <span style="color: red;" class="badge"><%= session.cart.totalQty %></span>
+                <% } %>
+            </li>
+        </ul>
     </nav>

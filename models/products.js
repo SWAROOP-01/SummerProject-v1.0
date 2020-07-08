@@ -6,7 +6,7 @@ var ProductSchema = new mongoose.Schema({
     image    : String,
     disc     : String,
     price    : Number,
-    category : String,
+    category : String, 
     comments : [{
         type : mongoose.Schema.Types.ObjectId ,
         ref  : "Comment"

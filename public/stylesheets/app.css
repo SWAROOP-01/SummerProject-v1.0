@@ -1,11 +1,10 @@
-/* GENERAL BODY STYLING */
+/* --------------------------------GENERAL BODY STYLING---------------------------------- */
 html { 
     min-height:100%;
     position:relative;    
 } 
-/* GENERAL BODY STYLING */
 
-/* FOOTER STYLING */
+/* ----------------------------------FOOTER STYLING---------------------------- */
 .blank{
     margin-bottom: 125px;
 }
@@ -19,9 +18,8 @@ html {
     width: 100%;
     text-align: center;
 }
-/* FOOTER STYLING */
 
-/* PRODUCT STYLING */
+/* ---------------------------------PRODUCT STYLING------------------------------- */
 #ADD{
     height: 155px;
     width: 75%;
@@ -40,9 +38,8 @@ html {
 .rightside , .category{
     margin-top: 20px;
 }
-/* PRODUCT STYLING */
 
-/* NAVBAR STYLING */
+/* -------------------------------NAVBAR STYLING------------------------------- */
 a.navbar-brand{
     padding-left: 10px;
 }
@@ -53,7 +50,7 @@ a.navbar-brand{
     height: 20px;
 }
 
-    /* SEARCH BAR */
+    /* ----------------SEARCH BAR--------------------- */
     .searchbar{
     margin-bottom: auto;
     margin-top: auto;
@@ -98,11 +95,9 @@ a.navbar-brand{
         color:white;
         text-decoration:none;
         }
-    /* SEARCH BAR */
-/* NAVBAR STYLING */
 
 
-/* SHOWPAGE STYLING */
+/* -------------------------------SHOWPAGE STYLING-------------------------- */
 div#showpage.card{
     width: 75%;
     margin-bottom: 75px;
@@ -136,9 +131,7 @@ div#showcomments.card{
     color: grey;
 }
 
-/* SHOWPAGE STYLING */
-
-/* DEVELOPER PAGE */
+/* ----------------------------------DEVELOPER PAGE----------------------------- */
 .btn-primary:hover,
 .btn-primary:focus {
     background-color: #108d6f;
@@ -262,9 +255,9 @@ section .section-title {
     border-radius: 50%;
 }
 
-/* DEVELOPER PAGE */
 
-/* AUTHENTICATION PAGES */
+
+/* --------------------------AUTHENTICATION PAGES------------------------ */
 div#reg_form.card{
     height: 370px;
     margin-top: 100px;
@@ -349,5 +342,20 @@ margin-left: 4px;
     
 }
 
+/* ---------------------------------------------------------SHOPPING CART--------------------------------------------------- */
 
-/* AUTHENTICATION PAGES */
+.smallImage{
+    height: 175px;
+    width: 175px;
+}
+
+
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.Qty{
+    width: 30px;
+}

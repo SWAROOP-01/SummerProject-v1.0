@@ -1,0 +1,73 @@
+<%- include('../partials/header'); -%>
+
+<%= console.log('ARE THERE ANY PRODUCTS HERE') %> 
+<%= console.log(products) %> 
+
+    <!-- <div class="container">
+        <div class="row">
+            <% products.forEach(function(product){ %> 
+                <ul>
+                    <li>PRODUCT NAME : <%= product.item.name %> </li>
+                    <li>PRODUCT PRICE: <%= product.item.price %></li>
+                    <li>PRODUCT CATEGORY : <%= product.item.category %> </li>
+                    <li>TOTAL QTY  : <%= product.qty %>    </li>
+                    <li>SUM PRICE : <%= product.price %>  </li>
+                    <li>TOT PRICE = <%= totalPrice %> </li>
+                </ul>
+            <% }); %> 
+        </div>
+    </div> -->
+
+
+    <div class="container">
+        <p></p>
+        <div class="row banner">
+            <div class="col md-4">
+                <strong><h3 style="color:grey;">AZCART ( <%= session.cart.totalQty %>  : items)</h3></strong>
+            </div>
+        </div>
+        <% products.forEach(function(product){ %>
+            <div class="row" >
+                <div class="col-md-3">
+                    <img class="img-thumbail border rounded img-fluid smallImage" src="<%= product.item.image %>" alt="">
+                </div>
+                <div class="col-md-6">
+                        <div>
+                          <h5><%= product.item.name %> </h5>
+                          <p class="mb-3 text-muted text-uppercase small">category - <%= product.item.category %> </p>
+                        </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="INPUT">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                          class="minus"><i class="fas fa-plus"></i></button>
+                        <input class="Qty" min="0" name="quantity" value="<%= product.qty %>" type="number">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                          class="plus"><i class="fas fa-minus"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6"></div>
+                <div class="col-md-3">
+                    <div class="PRICE">
+                        <h6><i class="fas fa-rupee-sign"></i><%= product.price %></h6>
+                    </div> 
+                </div>
+            </div>
+
+
+            <hr class="style-two">
+        <% }); %> 
+
+    </div>
+
+
+
+<div class="blank">
+    <!--  MAI HAGA THODA FOOTER ME USKO THIK KARNE K LIYE HAI YEH -->
+</div>            
+<%- include('../partials/footer'); -%>

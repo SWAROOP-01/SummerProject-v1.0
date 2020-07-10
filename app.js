@@ -76,7 +76,7 @@ app.get('/HomePage/:id',function(req,res){
         if(err){
             console.log(err);
         } else{
-            console.log(foundProduct);
+            // console.log(foundProduct);
             res.render("AZpages/show",{product : foundProduct});
         }
     });
@@ -171,10 +171,39 @@ app.get('/add-to-cart/:id',isLoggedIn,function(req,res){
         } 
               cart.add(product , product._id);  
               req.session.cart = cart;
-              console.log(req.session.cart);
+            //   console.log('session START');
+            //   console.log(req.session.cart);
+            //   console.log('------items------');
+            //   console.log(req.session.cart.items);
+            //   console.log('------items------');
+            //     console.log('session END');
+            
               res.redirect('/HomePage/');  
         
     });
+});
+
+app.get('/shopping-cart', function (req, res) {
+    console.log('------SESSION CART------');
+    console.log(req.session.cart);
+    console.log('------SESSION CART------');
+
+    if (!req.session.cart) {
+        console.log('--------------');
+        console('not RENDERED');
+        console.log('--------------');
+        return res.render('cart/ShoppingCart', {products: null});
+    }
+    else{
+        var cart = new Cart(req.session.cart);
+        console.log('-------PRODUCT PASSING------');
+        console.log(req.session.cart.items);
+        console.log('----CART GOES HERE-----');
+        console.log(cart);
+        // console.log(req.session.cart);
+        res.render('cart/ShoppingCart', {products: cart.generateArray(), totalPrice: cart.totalPrice});
+        console.log('-------PRODUCT PASSING------');
+    }
 });
 
 function isLoggedIn(req,res,next){

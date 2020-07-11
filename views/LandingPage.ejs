@@ -1,3 +1,76 @@
-WELCOME PAGE BANAO IDHAR 
+<!DOCTYPE html>
+<html>
+<head>
+ <!-- <link rel="stylesheet" href="css/all.css"> -->
+ <!-- <link rel="stylesheet" href="style.css"> -->
+ <script src="https://kit.fontawesome.com/d992b2350c.js" crossorigin="anonymous"></script>
+ <title>AZkart</title>
+ 
+ <style>
+ 	i{
+	position: absolute;
+	top: 70%;
+	animation: mymove 3s infinite;
+	}
+@keyframes mymove{
+	from{left: 0px;}		 
+	to{left: 620px;}
+	}
+  body{
+	background-image : url(https://images.unsplash.com/photo-1588420343728-7411f4c87441?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80); background-size: cover;
+	}
+  
+  .maindiv{
+  	width: 60%;
+	height: 400px;
+	position: absolute;
+	left: 20%;
+	background-image: url(https://i.pinimg.com/originals/44/93/36/449336e3f9e2f973f787e400fe4807e4.jpg);
+	background-size: 100% 100%;
+	box-shadow: 1px 2px 20px 5px white;
+	animation: slider 20s infinite ease;
+	}
 
-<a href="/HomePage">HOME PAGE</a>
+  @keyframes slider{
+	0%{background-image: url(https://i.pinimg.com/originals/44/93/36/449336e3f9e2f973f787e400fe4807e4.jpg); background-size: 100% 100%;}
+	25%{background-image: url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/10/24/22/istock-639223110-3.jpg?w968); background-size: 100% 100%;}
+	50%{background-image: url(http://onedaycart.com/odcb/wp-content/uploads/2014/12/Untitled-1-copy.jpg); background-size: 100% 100%;}
+	75%{background-image: url(https://as2.ftcdn.net/jpg/01/28/57/41/500_F_128574107_P1E9FylipIxetnXLi0ECTdHseUbLlVn0.jpg); background-size: 100% 100%;}
+	}
+  .logo{
+	width: 20%;
+	height: 100px;
+	position: absolute;
+	top: 70%;
+	left: 47%;
+	font-family: "Forte";
+	font-size: 300%;
+	}
+ 
+  .link{
+	position: absolute;
+	top: 80%;
+	left: 47%;
+	font-size: 150%;
+	}
+ 
+ </style>
+</head>
+
+
+<body>
+ <div class="maindiv">
+ </div>
+
+ <div class="logo">
+  AZkart
+ </div> 
+
+  <i class="fab fa-4x fa-opencart"></i>
+
+ <div class="link">
+  <a href="/HomePage">Shop Now</a>
+ </div>
+ 
+</body>
+</html>

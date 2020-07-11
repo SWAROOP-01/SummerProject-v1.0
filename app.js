@@ -11,14 +11,16 @@ var express      = require('express'),
     User         = require('./models/users'),
     session      = require('express-session'),
     MongoStore   = require('connect-mongo')(session),
-    Cart         = require('./models/cart')
+    Cart         = require('./models/cart'),
+    flash        = require('connect-flash')
 
 // APP CONFIG
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 mongoose.connect('mongodb://localhost/AZkart', {useNewUrlParser: true, useUnifiedTopology: true});
-    
+app.use(flash());
+
 // //Passport Config
 app.use(require('express-session')({
     secret : "Gibrish",
@@ -63,10 +65,8 @@ app.get('/HomePage',function(req,res){
             console.log(err);
         } else {
             res.render('AZpages/index',{products : allProducts});            
-        }
-        
+        } 
     });
-
 });
 
 // SHOWPAGE
@@ -160,6 +160,8 @@ app.get('/logout',function(req,res){
 
 
 // CART ROUTES
+
+//ADD-TO-CART ROUTE
 app.get('/add-to-cart/:id',isLoggedIn,function(req,res){
     var productId = req.params.id;
     var cart = new Cart(req.session.cart ? req.session.cart : {});
@@ -183,6 +185,7 @@ app.get('/add-to-cart/:id',isLoggedIn,function(req,res){
     });
 });
 
+//SHOPPING CART ROUTE
 app.get('/shopping-cart', function (req, res) {
     console.log('------SESSION CART------');
     console.log(req.session.cart);
@@ -190,9 +193,9 @@ app.get('/shopping-cart', function (req, res) {
 
     if (!req.session.cart) {
         console.log('--------------');
-        console('not RENDERED');
+        console.log('not RENDERED');
         console.log('--------------');
-        return res.render('cart/ShoppingCart', {products: null});
+        return res.render('shop/EmptyShoppingCart', {products: null});
     }
     else{
         var cart = new Cart(req.session.cart);
@@ -201,9 +204,19 @@ app.get('/shopping-cart', function (req, res) {
         console.log('----CART GOES HERE-----');
         console.log(cart);
         // console.log(req.session.cart);
-        res.render('cart/ShoppingCart', {products: cart.generateArray(), totalPrice: cart.totalPrice});
+        res.render('shop/ShoppingCart', {products: cart.generateArray(), totalPrice: cart.totalPrice});
         console.log('-------PRODUCT PASSING------');
     }
+});
+
+//CHECKOUT
+app.get('/checkout', isLoggedIn, function(req, res, next) {
+    if (!req.session.cart) {
+        return res.redirect('/login');
+    }
+    var cart = new Cart(req.session.cart);
+    var errMsg = req.flash('error')[0];
+    res.render('shop/checkout', {products: cart.generateArray(), totalPrice: cart.totalPrice, errMsg: errMsg, noError: !errMsg});
 });
 
 function isLoggedIn(req,res,next){
